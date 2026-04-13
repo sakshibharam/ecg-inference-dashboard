@@ -1,0 +1,8 @@
+<script>
+    const ws = new WebSocket('ws://localhost:8000/ws/ecg');
+    ws.onmessage = (event) => {
+        console.log("Heartbeat Data:", JSON.parse(event.data));
+    };
+    ws.onerror = (error) => console.log("WebSocket Error:", error);
+</script>
+<p>Open Console (F12) to see live ECG data stream.</p>

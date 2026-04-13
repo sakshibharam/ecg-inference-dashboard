@@ -1,0 +1,52 @@
+.monitor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.monitor-card {
+    background-color: #000;
+    border: 1px solid #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.05);
+    width: 940px;
+}
+
+.monitor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #1a1a1a;
+    padding-bottom: 10px;
+}
+
+.status-label {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.status-normal { color: #00ff00; }
+.status-alert { 
+    color: #ff0000; 
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.3; }
+}
+
+canvas {
+    background-color: #000;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+}
+
